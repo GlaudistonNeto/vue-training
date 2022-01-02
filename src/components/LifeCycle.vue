@@ -16,11 +16,20 @@ export default {
     setTimeout(() => {
       this.name = "G.S.O.Neto"      
     }, 1000);
+
+    this.lifeCycle();
   },
   mounted() {
     setTimeout(() => {      
       this.name = "Other cat"
     }, 2000);
+
+    this.lifeCycle();
+  },
+  methods: {
+    lifeCycle() {
+      console.log('Executed!');
+    }
   }
 }
 </script>

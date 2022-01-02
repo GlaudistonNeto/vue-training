@@ -1,5 +1,5 @@
 <template>
-  <img :src="avatar" :alt="description">
+  <img class="container" :src="avatar" :alt="description">
 </template>
 
 <script>
@@ -15,5 +15,7 @@ export default {
 </script>
 
 <style scoped>
-
+  .container {
+    margin-left: 25px;
+  }
 </style>
