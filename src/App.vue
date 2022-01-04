@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <FirstComponent msg="Welcome to Your Vue.js App"/>
   <LifeCycle />
   <Person />
@@ -7,6 +8,7 @@
 
 <script>
 import FirstComponent from './components/FirstComponent.vue';
+import Header from './components/Header.vue';
 import LifeCycle from './components/LifeCycle.vue';
 import Person from './components/Person.vue';
 
@@ -16,18 +18,21 @@ export default {
     FirstComponent,
     LifeCycle,
     Person,
+    Header,
   }
 }
 </script>
 
     LifeCicle
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  background-color: #333;
+  color: #fff;
+}
+a {
+  color: rgba(17, 191, 197, 0.863);
+}
+a:hover {
+  color: #ffff00
 }
 </style>

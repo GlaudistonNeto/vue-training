@@ -2,13 +2,19 @@
   <div>
     <p v-if="isWorking">I'm working at this moment.</p>
     <p v-else>I'm looking for a job at this moment.</p>
-    <p>I use the following technologies:</p>
+    <p>I use the following technologies for the backend:</p>
     <ul>
-      <li>JavaSript</li>
-      <li>Node.js</li>
-      <li>Vue.js</li>
-      <li>React-native</li>
+      <li v-for="(technology, index) in backend_technologies" :key="index">
+        {{ technology }}
+      </li>
     </ul>
+    <p>I use the following technologies for the frntend:</p>
+    <ul>
+      <li v-for="technology in frontend_technologies" :key="technology.id">
+        {{ technology.ftechnology }}
+      </li>
+    </ul>
+    <p></p>
     <div>
       <button @click="showEmail">{{ buttonText }}</button>
     </div>
@@ -34,7 +40,14 @@ export default {
       show_email: false,
       email: 'glaudistonson@gmail.com',
       portfolio: 'https://www.upwork.com/freelancers/~01e098fb79f01796b4',
-      buttonText: 'Show Email'
+      buttonText: 'Show Email',
+      backend_technologies: ['JavaSript', 'Node.js', 'express'],
+      frontend_technologies: [
+        {id: 1, ftechnology: 'React-native'},
+        {id: 2, ftechnology: 'Vue.js'},
+        {id: 3, ftechnology: 'Next.js'},
+        {id: 4, ftechnology: 'Nuxt.js'}
+      ],
     }
   },
   components: {
