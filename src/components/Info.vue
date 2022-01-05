@@ -31,14 +31,11 @@
 
 <script>
 import Picture from './Picture.vue';
-
 export default {
   name: 'Info',
   data() {
-    return {
-      isWorking: false,
+    return {      
       show_email: false,
-      email: 'glaudistonson@gmail.com',
       portfolio: 'https://www.upwork.com/freelancers/~01e098fb79f01796b4',
       buttonText: 'Show Email',
       backend_technologies: ['JavaSript', 'Node.js', 'express'],
@@ -52,6 +49,10 @@ export default {
   },
   components: {
     Picture,
+  },
+  props: {
+    email: String,
+    isWorking: Boolean
   },
   methods: {
     showEmail() {
@@ -67,5 +68,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

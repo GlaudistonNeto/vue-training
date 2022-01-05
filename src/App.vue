@@ -1,5 +1,5 @@
 <template>
-  <Header />
+  <Header :isLogged="true" />
   <FirstComponent msg="Welcome to Your Vue.js App"/>
   <LifeCycle />
   <Person />
